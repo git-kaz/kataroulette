@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリ名
 
-Things you may want to cover:
+カタルーレット
 
-* Ruby version
+### 公開 URL
 
-* System dependencies
+## アプリを作った理由
 
-* Configuration
+- どうしてこのアプリを作ろうと思ったのか
+  複数人が集まる場で話題を決める方法があれば良いと思った
 
-* Database creation
+## できること（機能一覧）
 
-* Database initialization
+- カテゴリ別のルーレットによる話題決定
 
-* How to run the test suite
+## 技術スタック
 
-* Services (job queues, cache servers, search engines, etc.)
+- Ruby on Rails
+  :
 
-* Deployment instructions
+## 今後の改善ポイント
 
-* ...
+- ログイン機能の実装
+- オリジナルルーレットの作成、保存
+- シェア機能で他人も利用可能
+
+## デプロイ
+
+- Render / Heroku などで公開
+- URL: 未定
