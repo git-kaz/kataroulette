@@ -1,31 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>カタルーレット</title>
+    <title>カタルーレット - 話題生成アプリ</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 </head>
-<body>
-    <div class="container mt-5 bg-primary-subtle">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <h1 class="text-center mb-4 mt-3 text-secondary">🎲カタルーレット🎲</h1>
-      
-      <!-- 結果表示エリア -->
-      <div class="card mb-4">
-        <div class="card-body text-center bg-light">
-          <h3 id="result-content">何について語る？</h3>
-          <span id="result-category" class="badge badge-secondary"></span>
+<body class="d-flex flex-column min-vh-100 bg-light">
+    <!-- Header -->
+    <header class="bg-primary text-white shadow-sm">
+        <div class="container">
+            <div class="row align-items-center py-3">
+                <div class="col-md-6">
+                    <h1 class="h3 mb-0">
+                        <i class="bi bi-dice-6 me-2"></i>
+                        カタルーレット
+                    </h1>
+                    <small class="text-white-50">話題生成アプリ</small>
+                </div>
+            </div>
         </div>
-      </div>
-      
-      <!-- ルーレットボタン -->
-      <div class="text-center mb-3">
-        <button id="roulette-btn" class="btn btn-primary btn-lg">
-          スタート！
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-</body>
-</html>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" id="roulette-tab">
+                            <i class="bi bi-dice-5 me-1"></i>
+                            ルーレット
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="topics-tab">
+                            <i class="bi bi-list-ul me-1"></i>
+                            話題一覧
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="add-topic-tab">
+                            <i class="bi bi-plus-circle me-1"></i>
+                            話題追加
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="history-tab">
+                            <i class="bi bi-clock-history me-1"></i>
+                            履歴
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-gear me-1"></i>
+                            設定
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-palette me-2"></i>テーマ設定</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-download me-2"></i>データエクスポート</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle me-2"></i>アプリについて</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow-1 py-4">
+        <div class="container">
+            <!-- ルーレット画面 -->
+            <div id="roulette-content" class="content-section">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <!-- メインルーレットカード -->
+                        <div class="card shadow-lg border-0 rounded-4 mb-4">
+                            <div class="card-body p-5 text-center">
+                                <h2 class="display-5 fw-bold text-primary mb-4">
+                                    <i class="bi bi-dice-6"></i>
+                                    カタルーレット
+                                    <i class="bi bi-dice-1"></i>
+                                </h2>
+                                
+                                <!-- 結果表示エリア -->
+                                <div class="card mb-4 border-0 bg-gradient text-dark" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                                    <div class="card-body py-4">
+                                        <h3 id="result-content" class="fw-bold mb-3">何について語る？</h3>
+                                        <span id="result-category" class="badge bg-light text-dark fs-6 px-3 py-2"></span>
+                                    </div>
+                                </div>
+                                
+                                <!-- ルーレットボタン -->
+                                <button id="roulette-btn" class="btn btn-primary btn-lg px-5 py-3 fw-bold fs-4 rounded-pill shadow mb-3">
+                                    <i class="bi bi-play-circle me-2"></i>
+                                    <span id="btn-text">スタート！</span>
+                                </button>
+                                
+                                <div class="text-muted">
+                                    <small>
+                                        <i class="bi bi-info-circle me-1"></i>
+                                        ボタンを押して話題をランダムに選ぼう！
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        
