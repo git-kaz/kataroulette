@@ -3,13 +3,13 @@ class TopicsController < ApplicationController
   end
 
   def roulette
-    category = params[:category]
-    topics = Topic.where(category: category)
-    @topic = topics.sample
+    #category = params[:category]
+    #topics = Topic.where(category: category)
+    topic = Topic.all.sample
 
     render json: {
-      content: @topic.content,
-      category: @topic.category
+      content: topic.content,
+      category: topic.category
     }
 
   end
