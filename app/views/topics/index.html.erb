@@ -1,2 +1,31 @@
-<h1>Topics#index</h1>
-<p>Find me in app/views/topics/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カタルーレット</title>
+</head>
+<body>
+    <div class="container mt-5 bg-success">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1 class="text-center mb-4 mt-3 text-white">🎲カタルーレット🎲</h1>
+      
+      <!-- 結果表示エリア -->
+      <div class="card mb-4">
+        <div class="card-body text-center bg-light">
+          <h3 id="result-content">何について語る？</h3>
+          <span id="result-category" class="badge badge-secondary"></span>
+        </div>
+      </div>
+      
+      <!-- ルーレットボタン -->
+      <div class="text-center mb-3">
+        <button id="roulette-btn" class="btn btn-primary btn-lg">
+          スタート！
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
