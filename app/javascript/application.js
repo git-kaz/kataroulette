@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         rouletteBtn.textContent = '回転中・・・';
 
         try {
-            const response = await fetch('/roulette');
+            const response = await fetch('/topics/roulette');
             const data = await response.json();
 
             setTimeout(() => {
