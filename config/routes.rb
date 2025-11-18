@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root "topics#index"
-  get "topics/roulette", to: 'topics#roulette'
+  root "/topics#index"
+  get "/topics/roulette", to: 'topics#roulette'
   resources :topics, only: %i[index]
   
   get "up" => "rails/health#show", as: :rails_health_check
